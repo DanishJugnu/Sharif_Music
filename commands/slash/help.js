@@ -64,7 +64,7 @@ const command = new SlashCommand()
       value:
         `<@756392267903926425>` +
         "\n" +
-        `[⚙ Support Server](${client.config.supportServer}) | [Invite Me](https://discord.com/oauth2/authorize?client_id=${client.config.clientId}&permissions=${client.config.permissions}&scope=bot%20applications.commands)`,
+        `[⚙ Support Server](${client.config.supportServer}) | [📩 Invite Me](https://discord.com/oauth2/authorize?client_id=${client.config.clientId}&permissions=${client.config.permissions}&scope=bot%20applications.commands)`,
     });
 
     // Construction of the buttons for the embed
