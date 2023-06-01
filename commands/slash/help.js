@@ -60,10 +60,11 @@ const command = new SlashCommand()
       helpEmbed.addFields({ name: cmd.name, value: cmd.description });
     });
     helpEmbed.addFields({
-      name: "Created with love by",
-        value:`<@756392267903926425>` +
-          "\n" +
-          `[⚙ Support Server](${client.config.supportServer}) | [📩 Invite Me](https://discord.com/oauth2/authorize?client_id=${client.config.clientId}&permissions=${client.config.permissions}&scope=bot%20applications.commands)`,
+      name: "Created With Love by",
+      value:
+        `<@756392267903926425>` +
+        "\n" +
+        `[⚙ Support Server](${client.config.supportServer}) | [Invite Me](https://discord.com/oauth2/authorize?client_id=${client.config.clientId}&permissions=${client.config.permissions}&scope=bot%20applications.commands)`,
     });
 
     // Construction of the buttons for the embed
@@ -71,12 +72,12 @@ const command = new SlashCommand()
       return new MessageActionRow().addComponents(
         new MessageButton()
           .setCustomId("help_cmd_but_2_app")
-          .setEmoji("⬅")
+          .setEmoji("◀️")
           .setStyle("PRIMARY")
           .setDisabled(pageNo == 0),
         new MessageButton()
           .setCustomId("help_cmd_but_1_app")
-          .setEmoji("➡")
+          .setEmoji("▶️")
           .setStyle("PRIMARY")
           .setDisabled(pageNo == maxPages - 1)
       );
@@ -110,13 +111,14 @@ const command = new SlashCommand()
         //console.log(cmd);
         helpEmbed
           .addFields({ name: cmd.name, value: cmd.description })
-          .setFooter({ text: `Help Page ${pageNo + 1} / ${maxPages}` });
+          .setFooter({ text: `Page ${pageNo + 1} / ${maxPages}` });
       });
       helpEmbed.addFields({
-        name: "Created with love by",
-        value:`<@756392267903926425>` +
+        name: "Created With Love by",
+        value:
+          `<@756392267903926425>` +
           "\n" +
-          `[⚙ Support Server](${client.config.supportServer}) | [📩 Invite Me](https://discord.com/oauth2/authorize?client_id=${client.config.clientId}&permissions=${client.config.permissions}&scope=bot%20applications.commands)`,
+          `[⚙ Support Server](${client.config.supportServer}) | [Invite Me](https://discord.com/oauth2/authorize?client_id=${client.config.clientId}&permissions=${client.config.permissions}&scope=bot%20applications.commands)`,
       });
       await iter.update({
         embeds: [helpEmbed],
